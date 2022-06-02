@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e47206fd7e6349cfad8e0a0f5ea85c74" Name="Diagram1">
+        <EntityTypeShape EntityType="DbTeknıkServısModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_ADMIN" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_ARACLAR" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_ARIZADETAY" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_CARI" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_DEPARTMAN" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_FATURABILGI" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_FATURADETAY" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_GIDER" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_HAKKIMIZDA" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_HAREKET" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_İLETİSİM" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_KATEGORI" Width="1.5" PointX="3.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_NOTLAR" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_PERSONEL" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_URUN" Width="1.5" PointX="6" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_URUNKABUL" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_FATURABILGI_TBL_CARI" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_HAREKET_TBL_CARI" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_URUNKABUL_TBL_CARI" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_PERSONEL_TBL_DEPARTMAN" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_FATURABILGI_TBL_PERSONEL" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_FATURADETAY_TBL_FATURABILGI" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_HAREKET_TBL_PERSONEL" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_HAREKET_TBL_URUN" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_URUN_TBL_KATEGORI" ManuallyRouted="false" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_TBL_URUNKABUL_TBL_PERSONEL" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.TBL_URUNTAKIP" Width="1.5" PointX="8.375" PointY="12.75" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.İL" Width="1.5" PointX="10.375" PointY="12.75" />
+        <EntityTypeShape EntityType="DbTeknıkServısModel.İLCE" Width="1.5" PointX="12.375" PointY="12.75" />
+        <AssociationConnector Association="DbTeknıkServısModel.FK_İLCE_İL" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

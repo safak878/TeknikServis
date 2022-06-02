@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A3255C3-C9F2-4FD5-A871-5452C344C97F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeknikServis</RootNamespace>
+    <AssemblyName>TeknikServis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Win, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Assessment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.BatchParserClient, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.BatchParserClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Diagnostics.Strace, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Diagnostics.Strace.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Dmf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlParser, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.SqlParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Utility, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Utility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.UtilityEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.UtilityEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Smo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlTDiagm, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlTDiagm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SString, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SString.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SplashScreen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SplashScreen.Winforms.1.0.0\lib\SplashScreen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\LollipopButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFileInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopFolderInPut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopSmallCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LollipopToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ANASAYFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ANASAYFA.Designer.cs">
+      <DependentUpon>ANASAYFA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ARIZALI_ÜRÜN_DETAYLARI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ARIZALI_ÜRÜN_DETAYLARI.Designer.cs">
+      <DependentUpon>ARIZALI_ÜRÜN_DETAYLARI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ARIZALI_ÜRÜN_KAYDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ARIZALI_ÜRÜN_KAYDI.Designer.cs">
+      <DependentUpon>ARIZALI_ÜRÜN_KAYDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ARIZA_DETAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ARIZA_DETAY.Designer.cs">
+      <DependentUpon>ARIZA_DETAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ARIZA_LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ARIZA_LİSTESİ.Designer.cs">
+      <DependentUpon>ARIZA_LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\AYARLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\AYARLAR.Designer.cs">
+      <DependentUpon>AYARLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CARİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CARİ.Designer.cs">
+      <DependentUpon>CARİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CARİ_EKLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CARİ_EKLE.Designer.cs">
+      <DependentUpon>CARİ_EKLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\CARİ_İLLER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\CARİ_İLLER.Designer.cs">
+      <DependentUpon>CARİ_İLLER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DEPARTMAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DEPARTMAN.Designer.cs">
+      <DependentUpon>DEPARTMAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FATURA_KALEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FATURA_KALEM.Designer.cs">
+      <DependentUpon>FATURA_KALEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FATURA_KALEMLERİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FATURA_KALEMLERİ.Designer.cs">
+      <DependentUpon>FATURA_KALEMLERİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FATURA_LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FATURA_LİSTESİ.Designer.cs">
+      <DependentUpon>FATURA_LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\HAKKIMIZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\HAKKIMIZDA.Designer.cs">
+      <DependentUpon>HAKKIMIZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\KATEGORİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\KATEGORİ.Designer.cs">
+      <DependentUpon>KATEGORİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\KURLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\KURLAR.Designer.cs">
+      <DependentUpon>KURLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\MARKALAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\MARKALAR.Designer.cs">
+      <DependentUpon>MARKALAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\NOTLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\NOTLAR.Designer.cs">
+      <DependentUpon>NOTLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\PERSONEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PERSONEL.Designer.cs">
+      <DependentUpon>PERSONEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\QRKOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\QRKOD.Designer.cs">
+      <DependentUpon>QRKOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\RAPOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\RAPOR.Designer.cs">
+      <DependentUpon>RAPOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\SATISLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\SATISLAR.Designer.cs">
+      <DependentUpon>SATISLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YAZDIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YAZDIR.Designer.cs">
+      <DependentUpon>YAZDIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YENİ_DEPARTMAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YENİ_DEPARTMAN.Designer.cs">
+      <DependentUpon>YENİ_DEPARTMAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YENİ_KATEGORİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YENİ_KATEGORİ.Designer.cs">
+      <DependentUpon>YENİ_KATEGORİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YENİ_ÜRÜN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YENİ_ÜRÜN.Designer.cs">
+      <DependentUpon>YENİ_ÜRÜN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\YOUTUBE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\YOUTUBE.Designer.cs">
+      <DependentUpon>YOUTUBE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÜRÜN_LİSTESİ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÜRÜN_LİSTESİ.Designer.cs">
+      <DependentUpon>ÜRÜN_LİSTESİ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\ÜRÜN_SATIŞ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\ÜRÜN_SATIŞ.Designer.cs">
+      <DependentUpon>ÜRÜN_SATIŞ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\İSTATİSTİK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\İSTATİSTİK.Designer.cs">
+      <DependentUpon>İSTATİSTİK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KULLANIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KULLANIC.Designer.cs">
+      <DependentUpon>KULLANIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LISTE_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Formlar\PRİNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\PRİNT.Designer.cs">
+      <DependentUpon>PRİNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPLASH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPLASH.Designer.cs">
+      <DependentUpon>SPLASH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sqlbaglantısı.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_ADMIN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_ARACLAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_ARIZADETAY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_CARI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_DEPARTMAN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_FATURABILGI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_FATURADETAY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_GIDER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_HAKKIMIZDA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_HAREKET.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_KATEGORI.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_NOTLAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_PERSONEL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_URUN.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_URUNKABUL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_URUNTAKIP.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_İLETİSİM.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UIManagers\DrawHelper.cs" />
+    <Compile Include="UIManagers\FontManager.cs" />
+    <Compile Include="URUNKATEGORİ_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="URUN_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Yedekleme\YEDEK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yedekleme\YEDEK.Designer.cs">
+      <DependentUpon>YEDEK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İletişim\GELEN_MESAJLAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İletişim\GELEN_MESAJLAR.Designer.cs">
+      <DependentUpon>GELEN_MESAJLAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İletişim\REHBER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İletişim\REHBER.Designer.cs">
+      <DependentUpon>REHBER.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ANASAYFA.resx">
+      <DependentUpon>ANASAYFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ARIZALI_ÜRÜN_DETAYLARI.resx">
+      <DependentUpon>ARIZALI_ÜRÜN_DETAYLARI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ARIZALI_ÜRÜN_KAYDI.resx">
+      <DependentUpon>ARIZALI_ÜRÜN_KAYDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ARIZA_DETAY.resx">
+      <DependentUpon>ARIZA_DETAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ARIZA_LİSTESİ.resx">
+      <DependentUpon>ARIZA_LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\AYARLAR.resx">
+      <DependentUpon>AYARLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CARİ.resx">
+      <DependentUpon>CARİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CARİ_EKLE.resx">
+      <DependentUpon>CARİ_EKLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\CARİ_İLLER.resx">
+      <DependentUpon>CARİ_İLLER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\DEPARTMAN.resx">
+      <DependentUpon>DEPARTMAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FATURA_KALEM.resx">
+      <DependentUpon>FATURA_KALEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FATURA_KALEMLERİ.resx">
+      <DependentUpon>FATURA_KALEMLERİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FATURA_LİSTESİ.resx">
+      <DependentUpon>FATURA_LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\HAKKIMIZDA.resx">
+      <DependentUpon>HAKKIMIZDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\KATEGORİ.resx">
+      <DependentUpon>KATEGORİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\KURLAR.resx">
+      <DependentUpon>KURLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\MARKALAR.resx">
+      <DependentUpon>MARKALAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\NOTLAR.resx">
+      <DependentUpon>NOTLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\PERSONEL.resx">
+      <DependentUpon>PERSONEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\QRKOD.resx">
+      <DependentUpon>QRKOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\RAPOR.resx">
+      <DependentUpon>RAPOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\SATISLAR.resx">
+      <DependentUpon>SATISLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YAZDIR.resx">
+      <DependentUpon>YAZDIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YENİ_DEPARTMAN.resx">
+      <DependentUpon>YENİ_DEPARTMAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YENİ_KATEGORİ.resx">
+      <DependentUpon>YENİ_KATEGORİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YENİ_ÜRÜN.resx">
+      <DependentUpon>YENİ_ÜRÜN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\YOUTUBE.resx">
+      <DependentUpon>YOUTUBE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÜRÜN_LİSTESİ.resx">
+      <DependentUpon>ÜRÜN_LİSTESİ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\ÜRÜN_SATIŞ.resx">
+      <DependentUpon>ÜRÜN_SATIŞ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\İSTATİSTİK.resx">
+      <DependentUpon>İSTATİSTİK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KULLANIC.resx">
+      <DependentUpon>KULLANIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Formlar\PRİNT.resx">
+      <DependentUpon>PRİNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPLASH.resx">
+      <DependentUpon>SPLASH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yedekleme\YEDEK.resx">
+      <DependentUpon>YEDEK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İletişim\GELEN_MESAJLAR.resx">
+      <DependentUpon>GELEN_MESAJLAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İletişim\REHBER.resx">
+      <DependentUpon>REHBER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\URUN_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\Smiling-Man-PNG-Download-Image.png" />
+    <None Include="Resources\icons8_person_1.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Places-user-identity2.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Places-user-identity1.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Places-user-identity.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets" Condition="Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
